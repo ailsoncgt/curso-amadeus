@@ -27,6 +27,9 @@ class Course(models.Model):
     category = models.ForeignKey(
         Category, verbose_name='Categoria'
     )
+    start_date = models.DateField(
+        'Início', blank=True, null=True
+    )
 
     class Meta:
         verbose_name = 'Curso'

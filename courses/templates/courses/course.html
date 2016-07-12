@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ course }}</h2>
+<p>
+  <strong>Categoria</strong>: {{ course.category }}<br>
+  <strong>Início</strong>: {{ course.start_date|date:"d/m/Y"|default:"Não definida" }}<br>
+</p>
+{{ course.description|linebreaks }}
+{% endblock %}
